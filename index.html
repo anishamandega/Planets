@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planets</title>
+
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(142, 224, 251) 0%,
+          rgb(255, 121, 225) 100.7%
+        );
+        margin: 40px;
+        line-height: 2;
+      }
+      h1 {
+        font-weight: 100px;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 40px;
+        text-align: center;
+      }
+      h2 {
+        font-family: "Courier New", Courier, monospace;
+        text-align: center;
+      }
+      a {
+        text-align: center;
+        font-size: 20px;
+        width: 200px;
+        display: block;
+        margin: auto;
+      }
+      img {
+        width: 200px;
+        display: block;
+        padding: 20px;
+        margin: auto;
+        border-radius: 50px;
+      }
+      em {
+        text-align: center;
+        font-size: 30px;
+        width: 200px;
+        display: block;
+        margin: auto;
+      }
+      p {
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+      }
+      hr {
+        color: black;
+      }
+      div {
+        text-align: center;
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      span {
+        font-size: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        text-align: center;
+        padding: 20px;
+        margin: 20px auto;
+      }
+      button {
+        font-size: 18px;
+        background: transparent;
+        padding: 20px;
+        margin: auto;
+        display: block;
+        border: 1px solid rgba(184, 122, 242, 0.866);
+        border-radius: 30px;
+        box-shadow: 7px -2px 10px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background: rgba(184, 122, 242, 0.866);
+        color: white;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Planets</h1>
+    <hr />
+    <img
+      src="https://i.pinimg.com/564x/0a/a5/dc/0aa5dc7d61c045f4bbd4b06744019974.jpg"
+      alt="Picture of my favourite planet"
+      width="500"
+    />
+    <p>
+      Planets, those celestial marvels suspended in the vastness of space,
+      ignite our imagination and curiosity. These cosmic bodies, ranging from
+      massive gas giants to rocky worlds, hold mysteries waiting to be
+      unraveled. Each planet carries its own distinct personality, with unique
+      features and environments. From the scorching inferno of Mercury to the
+      frigid beauty of Neptune, they offer glimpses into the awe-inspiring
+      diversity of our universe. Planets serve as cosmic storytellers, bearing
+      the history of our solar system and the potential for life beyond Earth.
+      They beckon us to explore, to marvel at their grandeur, and to ponder the
+      vastness of the cosmos. As we gaze up at the night sky, planets remind us
+      of our place in the universe and inspire us to reach for the stars in our
+      pursuit of knowledge and discovery.
+    </p>
+
+    <h2>My Favourite Planet</h2>
+    <hr />
+    <em><strong>Saturn🪐</strong></em>
+    <img
+      src="https://i.pinimg.com/564x/b2/36/5d/b2365d9c67d5ba07f22a52da76656326.jpg"
+      alt="Picture of my favourite planet"
+      width="150"
+    />
+    <span class="Saturn">
+      Saturn holds a special place in my heart as my favorite planet in the
+      solar system. Its mesmerizing beauty, with those iconic rings encircling
+      its majestic form, never fails to ignite my imagination and wonder.
+      Saturn's ethereal presence represents a cosmic elegance that resonates
+      with me on a profound level. Its vibrant colors and captivating features
+      evoke a sense of awe and curiosity within me. Beyond its stunning
+      appearance, Saturn symbolizes the infinite possibilities of the universe,
+      reminding me of the vastness and mystery that lies beyond our earthly
+      boundaries. serves as a constant source of inspiration, igniting my
+      imagination and fueling my passion for space exploration. Saturn, with its
+      undeniable allure, embodies the enchantment and limitless wonders of the
+      cosmos, making it my cherished favorite planet.
+    </span>
+
+    <a href="https://solarsystem.nasa.gov/planets/overview/" target="_blank"
+      >More About the Planets</a
+    ><br />
+    <div class="saveStar">Purchase and Name a star🌟</div>
+    <br /><button>BUY NOW</button>
+
+    <script>
+      function updateHeading(newHeading) {
+        let heading = document.querySelector(".saveStar");
+        heading.innerHTML = newHeading;
+      }
+
+      function getStar() {
+        let star = prompt("Would you like to continue to purchase a star ?");
+        star = star.toLocaleLowerCase().trim();
+        if (star === "yes") {
+          let name = prompt("What would you like to name the star ?");
+          alert(`${name}'s star is on the way 🌟🌟`);
+          updateHeading(
+            "We eagerly anticipate the moment when your star is prepared to illuminate the sky, and we will be sure to reach out to you promptly.Your celestial experience awaits! 🌟"
+          );
+        } else {
+          alert(
+            `It's unfortunate that you weren't able to purchase a star but keep exploring and reaching for the stars in your own unique way!"`
+          );
+        }
+      }
+      function buttonClick() {
+        let sheButton = document.querySelector("button");
+        sheButton.addEventListener("click", getStar);
+      }
+
+      buttonClick();
+    </script>
+  </body>
+</html>
